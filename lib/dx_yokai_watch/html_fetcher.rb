@@ -1,5 +1,3 @@
-require 'awesome_print'
-
 require 'net/http'
 require 'uri'
 require 'nokogiri'
