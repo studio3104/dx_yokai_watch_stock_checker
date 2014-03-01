@@ -1,0 +1,19 @@
+.col-xs-12
+  - @stock_informations.each do |info|
+    - if info[:stocked]
+      .panel.panel-primary
+        .panel-heading
+          h3.panel-title
+            a href="#{info[:store_url]}" target="_blank" #{info[:store_name]}
+        .panel-body
+
+  - @stock_informations.each do |info|
+    - unless info[:stocked]
+      .panel.panel-danger
+        .panel-heading
+          h3.panel-title
+            a href="#{info[:store_url]}" target="_blank" #{info[:store_name]}
+        .panel-body
+          img src="#{info[:img_url]}" width="20" height="20"
+          span &nbsp;在庫なし
+          span &nbsp;#{info[:price]}円
